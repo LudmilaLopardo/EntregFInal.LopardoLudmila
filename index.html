@@ -4,10 +4,54 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Segunda Entrega Proyecto Final - Ludmila Lopardo</title>
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>Tercera Entrega Proyecto Final - Ludmila Lopardo</title>
   </head>
   <body>
-    <h1>Simulador de Prestamos</h1>
+    <header>
+      <h1 id="titulo-principal" class="titulo-principal">
+        Simulador de Prestamos
+      </h1>
+    </header>
+    <main id="contenido-principal">
+      <p class="subtitulo">Bienvenido al simulador de prestamos.</p>
+      <div id="entrada">
+        <h2>Ingrese su DNI</h2>
+        <div id="formulario_dni">
+          <label for="dni">DNI</label>
+          <input id="dni" type="text" />
+        </div>
+
+        <button id="ingresar" onclick="ingresar();">Ingresar</button>
+      </div>
+      <div id="seleccion_opciones">
+        <h2>Elija una opcion</h2>
+        <div id="lista_de_opciones">
+          <button onclick="seleccionar_cuotas();">Simular Prestamo</button>
+          <button onclick="ver_prestamos();">Ver Prestamos</button>
+          <button onclick="volver_menu_principal();">Salir</button>
+        </div>
+        <p id="mensaje_seleccion_cuotas"></p>
+      </div>
+      <div id="seleccion_cuotas">
+        <h2>Ingrese el monto a simular</h2>
+        <div id="formulario_monto">
+          <label for="monto">$</label>
+          <input type="number" id="monto" placeholder="0" />
+        </div>
+        <div id="lista_de_cuotas">
+          <button id="cuota_12" onclick="seleccionar_cuota(12);">12</button>
+          <button id="cuota_24" onclick="seleccionar_cuota(24);">24</button>
+          <button id="cuota_36" onclick="seleccionar_cuota(36);">36</button>
+          <button id="cuota_48" onclick="seleccionar_cuota(48);">48</button>
+        </div>
+        <button id="simular_prestamo" onclick="simular_prestamo();">
+          Simular
+        </button>
+        <p id="mensaje_simular_prestamo"></p>
+      </div>
+    </main>
+    <footer></footer>
     <script src="./js/script.js"></script>
   </body>
 </html>

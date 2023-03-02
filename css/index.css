@@ -1,0 +1,224 @@
+/*espacios*/
+@font-face {
+  font-family: CrimsonText-SemiBold;
+  src: url("../../fonts/CrimsonText-SemiBold.ttf");
+}
+/* font family */
+
+/*Estilos Generales*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "CrimsonText-SemiBold";
+}
+
+html {
+  font-size: 62.5%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(21, 19, 18);
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+header {
+  margin-top: 100px;
+}
+
+main {
+  width: 100vw;
+}
+
+h1 {
+  font-size: 48px;
+  text-align: center;
+}
+.subtitulo {
+  font-size: 24px;
+  text-align: center;
+}
+#mensaje {
+  font-size: 24px;
+  border: 1px solid rgb(80, 80, 80);
+  padding: 10px;
+  min-height: 100px;
+  max-height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: none;
+}
+
+label {
+  font-weight: 600;
+}
+input,
+label {
+  font-size: 24px;
+}
+
+input {
+  height: 40px;
+  border-radius: 10px;
+  width: 100%;
+  padding: 0 10px;
+}
+
+#entrada {
+  margin: 20px;
+  display: block;
+}
+
+#entrada h2 {
+  font-size: 36px;
+  text-align: center;
+}
+
+#ingresar {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+}
+.error {
+  color: rgb(240, 101, 101);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#seleccion_opciones {
+  width: 100%;
+  display: none;
+}
+#seleccion_opciones h2 {
+  font-size: 36px;
+  text-align: center;
+}
+
+#seleccion_opciones #lista_de_opciones button {
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1;
+  font-size: 32px;
+  background-color: blanchedalmond;
+  margin: 0 10px;
+}
+
+#seleccion_opciones #lista_de_opciones button:hover {
+  background-color: bisque;
+  cursor: pointer;
+}
+
+#lista_de_opciones {
+  display: flex;
+}
+
+#seleccion_cuotas {
+  width: 100%;
+  display: none;
+  flex-direction: column;
+}
+#seleccion_cuotas h2 {
+  font-size: 36px;
+  text-align: center;
+}
+
+#seleccion_cuotas #formulario_monto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+#seleccion_cuotas #formulario_monto input {
+  width: auto;
+  height: 80px;
+  font-size: 48px;
+}
+
+#seleccion_cuotas #formulario_monto label {
+  font-size: 48px;
+  color: grey;
+  margin: 0 15px;
+}
+
+#seleccion_cuotas #lista_de_cuotas button {
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1;
+  font-size: 32px;
+  background-color: blanchedalmond;
+  margin: 0 10px;
+}
+
+#seleccion_cuotas #lista_de_cuotas button:hover {
+  background-color: bisque;
+  cursor: pointer;
+}
+#seleccion_cuotas #lista_de_cuotas button.seleccionado {
+  background-color: rgb(243, 176, 94);
+}
+
+#seleccion_cuotas #lista_de_cuotas {
+  margin: 20px 10px;
+  display: flex;
+}
+
+#seleccion_cuotas #simular_prestamo {
+  margin: 20px;
+  margin-top: 0;
+  padding: 20px;
+  font-size: 36px;
+}
+
+#mensaje_simular_prestamo {
+  font-size: 24px;
+  background-color: rgb(248, 193, 193);
+  border: 1px solid red;
+  margin: 20px;
+  margin-top: 0;
+  padding: 20px;
+  display: none;
+}
+
+.mensaje_resultado_simulador {
+  background-color: rgb(218, 247, 218);
+  border: 1px solid green;
+  color: black;
+  padding: 30px;
+  font-size: 48px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.mensaje_resultado_simulador .monto {
+  color: green;
+}
+
+.mensaje_resultado_simulador button {
+  font-size: 24px;
+  margin-top: 10px;
+  padding: 10px;
+}

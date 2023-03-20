@@ -4,6 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/bootstrap-table@1.21.3/dist/bootstrap-table.min.css"
+    />
     <link rel="stylesheet" href="./css/index.css" />
     <title>Tercera Entrega Proyecto Final - Ludmila Lopardo</title>
   </head>
@@ -16,12 +25,19 @@
     <main id="contenido-principal">
       <p class="subtitulo">Bienvenido al simulador de prestamos.</p>
       <div id="entrada">
-        <h2>Ingrese su DNI</h2>
+        <h2>Ingrese su DNI y Pais</h2>
         <div id="formulario_dni">
-          <label for="dni">DNI</label>
-          <input id="dni" type="text" />
+          <div id="dni_container">
+            <label for="dni">DNI</label>
+            <input id="dni" type="text" />
+          </div>
+          <div id="pais_container">
+            <label for="paises">Pais</label>
+            <select id="paises">
+              <option>Seleccione un pais</option>
+            </select>
+          </div>
         </div>
-
         <button id="ingresar" onclick="ingresar();">Ingresar</button>
       </div>
       <div id="seleccion_opciones">
@@ -50,8 +66,31 @@
         </button>
         <p id="mensaje_simular_prestamo"></p>
       </div>
+      <div id="tabla_de_prestamos">
+        <table id="table">
+          <thead>
+            <tr>
+              <th>DNI</th>
+              <th>Monto</th>
+              <th>Cuotas</th>
+              <th>Valor Cuota</th>
+              <th>Fecha</th>
+            </tr>
+          </thead>
+          <tbody id="table-body"></tbody>
+        </table>
+        <button onclick="volver_menu_principal();" id="table-volver">
+          Volver
+        </button>
+      </div>
     </main>
     <footer></footer>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.21.3/dist/bootstrap-table.min.js"></script>
     <script src="./js/script.js"></script>
   </body>
 </html>
